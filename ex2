@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <math.h>
+
+int main(){
+    int neg = 1;
+    double den = 1.0;
+    double x = 0.0;
+    double dif = 0.0;
+    long cont = 0;
+
+    scanf("%lf", &dif);
+
+    while (cont >=0){
+        x+=(4.0 * (neg / den));
+        neg *= -1;
+        den +=2;
+        cont++;
+        if (x + dif >= M_PI && x-dif <= M_PI){
+            printf("%ld\n", cont);
+            break;
+        }
+    }
+
+    return 0;
+}
